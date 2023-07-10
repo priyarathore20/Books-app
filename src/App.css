@@ -81,14 +81,13 @@ html{
     height: 25px;
 }
 .container{
-    margin: 0 30px 25px 30px;
+    margin: 0 auto;
     margin-top: 25px;
-    grid-gap:20px; 
-    display: flex;
-    justify-content: space-evenly;
-    gap: 150px;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(200px,0.5fr));
+    grid-gap:100px;
     box-sizing: border-box;
+    padding: 50px;
 }
 .card{
     background-color: var(--secondary-color);

@@ -1,15 +1,33 @@
-import React from 'react'
+import React, { useState } from 'react';
+import Modal from './Modal';
 
-const Cards = () => {
+const Cards = ({ Book }) => {
+  const [show,setShow]=useState(false);
+  const [bookItem,setItem]=useState();
+  console.log(Book)
   return (
-    <div className='card'>
-      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQH4ETmXPA547mkiROFJj2NW-h_1K70eFwC-w&usqp=CAU" alt="#" />
-      <div>
-        <h3 className='title'>React js</h3>
-      <p className="amout">$ 320</p>
-      </div>
-    </div>
-  )
-}
+    <>
+      {Book.map((item, key) => {
+        key= item.id
+        let title = item.volumeInfo?.title
+        let thumbnail = item.volumeInfo.imageLinks && item.volumeInfo.imageLinks.thumbnail;
+        let price = item.saleInfo.saleability === "FOR_SALE" ? item.saleInfo.listPrice.amount : item.saleInfo.saleability 
+        return (
+          <div className="card" onClick={()=>{setShow(true);setItem(item)}}>
+            <img
+              src={thumbnail}
+              alt="#"
+            />
+            <div>
+              <h3 className="title">{title}</h3>
+              <p className="amount">&#8377; {price}</p>
+            </div>
+            <Modal show={show} item={bookItem} onClose={()=>setShow(false)}/>
+          </div>
+        );
+      })}
+    </>
+  );
+};
 
-export default Cards
+export default Cards;

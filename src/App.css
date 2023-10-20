@@ -3,6 +3,7 @@
     padding: 0;
     margin: 0;
     font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
 :root{
     --primary-color:#755139FF;
@@ -21,65 +22,62 @@ html{
     box-shadow: 0 5px 10px var(--secondary-color);
     display: flex;
     align-items: center;
-    position: relative;
+    flex-direction: column;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.7)),url(https://github.com/Kirti-salunkhe/OpenBook/blob/main/src/Components/bg1.png?raw=true);
+    justify-content: center;
 }
-.header::before{
-    content: "";
-    position: absolute;
-    top:0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)),url(https://github.com/Kirti-salunkhe/OpenBook/blob/main/src/Components/bg1.png?raw=true);
-    clip-path: circle(60% at left 300px);
-    z-index: -1;
-}
+
 .row2{
-    position: absolute;
-    top:10px;
-    right: 150px;
+    width: 100%;
+    max-width: 400px;
     text-align: center;
+    margin: 0 auto;
+
 }
+
 .row2 h2{
     font-size: 3rem;
     margin-top: 20px;
     margin-bottom: 15px;
 }
-.row2 img{
-    margin-top: 30px;
-    width: 250px;
-}
+
 .row1 h1{
     font-size: 3rem;
     text-align: center;
-    margin-left: 35px;
-    font-family: 'Bodoni Moda', serif;
+    font-style: italic;
+    padding: 10px 20px;
+    /* margin-top: 50px; */
 }
+
 .search{
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .search input{
     outline: 0;
     border: 0;
-    width: 350px;
+    width: 100%;
     height: 35px;
-    padding: 0 0.5rem;
+    padding: 0 1rem;
     font-size: 15px;
     font-weight: bold;
+    border-radius: 8px 0 0 8px;
 }
 .search button{
     outline: none;
     border: none;
     height: 35px;
     padding: 0 0.5rem;
+    border-radius: 0 8px 8px 0;
 }
 .search-btnn{
     color: #755139FF;
     width: 50px;
     height: 25px;
 }
+
 .container{
     margin: 0 auto;
     margin-top: 25px;
@@ -105,7 +103,7 @@ html{
 }
 .card img{
     width: 100%;
-    height: 200px;
+    height: 250px;
     border-radius: 1rem 1rem 0 0;
 }
 .card .bottom{
@@ -190,4 +188,34 @@ html{
     margin-top: 2rem;
     text-align: justify;
     font-size: 13px;
+}
+
+
+@media screen and (max-width: 360px) {
+    .row1 h1{
+        font-size: 2.5rem;
+    }
+    .row2{
+        width:  250px;
+    }
+    .row2 h2{
+        font-size: 1.75rem;
+    }
+    .container{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .card{
+        width: 200px;
+        height: 100%;
+        min-height: 150px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    .card img{
+        height: 200px;
+        object-fit: cover;    }
 }

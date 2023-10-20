@@ -192,62 +192,30 @@ html {
   font-size: 13px;
 }
 
-@media screen and (max-width: 360px) {
-  .row1 h1 {
-    font-size: 2.5rem;
+@media screen and (max-width: 900px) {
+    .container{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    .card {
+        width: 290px;
+        height: 100%;
+        min-height: 300px;
+        /* min-height: 150px; */
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
+      .card img {
+        height: 250px;
+        object-fit: fill;
+      } 
   }
-  .row2 {
-    width: 250px;
-  }
-  .row2 h2 {
-    font-size: 1.75rem;
-  }
-  .container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-  }
-  .card {
-    width: 200px;
-    height: 100%;
-    min-height: 150px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-  }
-  .card img {
-    height: 200px;
-    object-fit: contain;
-  }
-  .overlay-inner {
-    height: 500px;
-    width: 350px;
-  }
-  .description {
-    min-height: 150px;
-    padding-bottom: 20px;
-    overflow: hidden;
-    max-height: 230px;
-  }
-  .overlay-inner .inner-box img {
-    width: 100px;
-    height: 150px;
-  }
-  .overlay-inner .inner-box h3 {
-    font-size: 1rem;
-  }
-  .info h1 {
-    font-size: 1.5rem;
-  }
-  .overlay-inner .inner-box h4 {
-    font-size: 1rem;
-  }
-}
 
 @media screen and (max-width: 585px) {
     .row1 h1 {
-      font-size: 2.5rem;
+      font-size: 2.25rem;
     }
     .row2 {
       width: 250px;
@@ -300,24 +268,58 @@ html {
       font-size: 1.2rem;
     }
   }
-  
-  @media screen and (max-width: 900px) {
-    .container{
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-    }
-    .card {
-        width: 290px;
-        height: 100%;
-        min-height: 300px;
-        /* min-height: 150px; */
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-      }
-      .card img {
-        height: 250px;
-        object-fit: fill;
-      } 
+
+@media screen and (max-width: 360px) {
+  .row1 h1 {
+    font-size: 2rem;
   }
+  .row2 {
+    width: 250px;
+  }
+  .row2 h2 {
+    font-size: 1.75rem;
+  }
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .card {
+    width: 200px;
+    height: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  .card img {
+    height: 200px;
+    object-fit: contain;
+  }
+  .overlay-inner {
+    height: 500px;
+    width: 350px;
+  }
+  .description {
+    min-height: 150px;
+    padding-bottom: 20px;
+    overflow: hidden;
+    max-height: 230px;
+  }
+  .overlay-inner .inner-box img {
+    width: 100px;
+    height: 150px;
+  }
+  .overlay-inner .inner-box h3 {
+    font-size: 1rem;
+  }
+  .info h1 {
+    font-size: 1.5rem;
+  }
+  .overlay-inner .inner-box h4 {
+    font-size: 1rem;
+  }
+}
+ 
+ 

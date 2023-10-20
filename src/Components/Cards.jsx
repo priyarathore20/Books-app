@@ -20,7 +20,7 @@ const Cards = ({ Book }) => {
           <div
             className="card"
             onClick={() => {
-              setShow(true);
+              setShow(!show);
               setItem(item);
             }}
           >

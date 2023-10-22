@@ -7,7 +7,8 @@ const Main = () => {
   const [search, setSearch] = useState("");
   const [bookData, setBookData] = useState([]);
 
-  const handleSearch = async () => {
+  const handleSearch = async (e) => {
+    e.preventDefault();
     try {
       const res = await axios.get(
         " https://www.googleapis.com/books/v1/volumes?q=" +
@@ -31,17 +32,17 @@ const Main = () => {
         </div>
         <div className="row2">
           <h2>Find your book :</h2>
-          <div className="search">
+          <form onSubmit={handleSearch} className="search">
             <input
               value={search}
               onChange={(e) => setSearch(e.target.value)}
               type="text"
               placeholder="Enter name"
             />
-            <button className="search-btn" onClick={handleSearch}>
+            <button type="submit" className="search-btn" onClick={handleSearch}>
               <HiSearch className="search-btnn" />
             </button>
-          </div>
+          </form>
         </div>
       </div>
       <div className="container">{<Cards Book={bookData} />}</div>

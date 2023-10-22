@@ -95,6 +95,9 @@ html {
   box-shadow: 0 5px 5px rgba(212, 185, 150, 0.5);
   transition: 0.5s;
   text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   position: relative;
 }
 .card:hover {
@@ -299,7 +302,7 @@ html {
   }
   .overlay-inner {
     height: 500px;
-    width: 350px;
+    width: 290px;
   }
   .description {
     min-height: 150px;

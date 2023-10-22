@@ -71,6 +71,7 @@ html {
   height: 35px;
   padding: 0 0.5rem;
   border-radius: 0 8px 8px 0;
+  cursor: pointer;
 }
 .search-btnn {
   color: #755139ff;
@@ -90,6 +91,7 @@ html {
 .card {
   background-color: var(--secondary-color);
   border-radius: 1rem;
+  cursor: pointer;
   padding: 0.5rem;
   margin-bottom: 10px;
   box-shadow: 0 5px 5px rgba(212, 185, 150, 0.5);
@@ -154,13 +156,13 @@ html {
   font-size: 1.3rem;
 }
 .overlay-inner .close {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
   outline: none;
   border: none;
   font-size: 17px;
   background-color: transparent;
+  cursor: pointer;
+  display: flex;
+
 }
 .overlay-inner .inner-box {
   margin-top: 30px;
@@ -183,6 +185,7 @@ html {
   outline: none;
   border: none;
   width: 100px;
+  cursor: pointer;
   border-radius: 5px;
   background-color: #24a0ed;
   color: white;

@@ -13,8 +13,8 @@ const Modal = ({ show, item, onClose }) => {
         <div className="overlay-inner">
           <div>
             {" "}
-            <button className="close">
-              <FaTimes onClick={onClose} />
+            <button className="close" onClick={onClose}>
+              <FaTimes />
             </button>
           </div>
           <div className="inner-box">
